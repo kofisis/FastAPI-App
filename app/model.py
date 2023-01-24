@@ -7,7 +7,7 @@ from sqlalchemy.orm import relationship
 
 
 class Users(Base):
-    __table__name = "users"
+    __tablename__ = "users"
     id= Column(Integer,primary_key=True,nullable=False)
     name=Column(String,nullable=False)
     location=Column(String,nullable=False)
@@ -18,7 +18,7 @@ class Users(Base):
     owner = relationship("Registration")
 
 class Registration(Base):
-    __table__name = "registration"
+    __tablename__ = "registration"
     id=Column(Integer, nullable=False,primary_key=True)
     email=Column(String, nullable=False, unique=True)
     password=Column(String, nullable=False)
