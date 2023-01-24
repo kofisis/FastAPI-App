@@ -10,7 +10,7 @@ class Users(Base):
     __table__name = "users"
     id= Column(Integer,primary_key=True,nullable=False)
     name=Column(String,nullable=False)
-    location=Column(String,nullabl=False)
+    location=Column(String,nullable=False)
     published=Column(Boolean,nullable=False,server_default="True")
     ratings=Column(Integer,nullable=False,server_default="0")
     created_at=Column(TIMESTAMP,nullable=False,server_default=text("NOW()"))
